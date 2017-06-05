@@ -1,6 +1,6 @@
 {
   "name": "digital_agency_test",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A test project for an API for a digital agency",
   "main": "server.js",
   "scripts": {
