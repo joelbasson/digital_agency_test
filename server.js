@@ -52,9 +52,7 @@ router.post('/order', function(req, res) {
             return res.json(result);
         });
     });
-    
 });
-
 
 // REGISTER OUR ROUTES -------------------------------
 // all of the routes will be prefixed with /api
