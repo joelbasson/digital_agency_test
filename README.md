@@ -26,7 +26,7 @@ And then browse to http://127.0.0.1:8080/ to see sample Swagger documentation. T
 You can run the test with the following command
 
 ```shell
-mocha test/cart-test.js
+mocha test/data-structure-test.js
 ```
 
 ## Information
