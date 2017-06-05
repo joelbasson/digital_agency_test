@@ -1,0 +1,84 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a test server for Spotzer.",
+        "version": "1.0.0",
+        "title": "Spotzer Test",
+        "contact": {
+            "email": "joelbasson@me.com"
+        }
+    },
+    "host": "127.0.0.1",
+    "basePath": "/api",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/order": {
+            "post": {
+                "tags": [
+                    "orders"
+                ],
+                "summary": "Add a new order",
+                "description": "",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Order object that needs to be added",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Order"
+                        }
+                    }
+                ],
+                "responses": {
+                    "403": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+            
+        }
+    },
+    "definitions": {
+        "Order": {
+            "type": "object",
+            "properties": {
+                "Partner": {
+                    "type": "string",
+                    "description": "Partner"
+                },
+                "OrderID": {
+                    "type": "string",
+                    "description": "Order ID"
+                },
+                "TypeOfOrder": {
+                    "type": "string",
+                    "description": "Type of Order"
+                },
+                "SubmittedBy": {
+                    "type": "string",
+                    "description": "Submitted By"
+                },
+                "CompanyID": {
+                    "type": "string",
+                    "description": "Company ID"
+                },
+                "CompanyName": {
+                    "type": "string",
+                    "description": "Company Name"
+                }
+            },
+            "xml": {
+                "name": "Order"
+            }
+        }
+    }
+}
